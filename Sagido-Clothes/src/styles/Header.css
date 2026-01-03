@@ -1,0 +1,23 @@
+@layer components {
+    .nav-a {
+    @apply relative inline-block; 
+    }
+
+.nav-a::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    height: 2px;
+    background: oklch(21% 0.006 285.885);
+    border-radius: 1.5px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease-out;
+}
+
+.nav-a:hover::before {
+    transform: scaleX(1);
+    }
+}
